@@ -32,4 +32,4 @@ docker-compose stop \
 ``` 
 
 ## Tests
-You can run te tests by using the following command: `docker exec assignment01-laravel ./vendor/bin/phpunit`.
+You can run the tests by using the following command: `docker exec assignment01-laravel ./vendor/bin/phpunit`.
