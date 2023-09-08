@@ -6,6 +6,7 @@
 1. Clone the repository.
 1. Start the containers by running `docker-compose up -d` in the project root.
 1. Install the composer packages by running `docker-compose exec laravel composer install`.
+1. Migrate the database by running `docker exec assignment01-laravel php artisan migrate:refresh --seed`.
 1. Access the Laravel instance on `http://localhost` (If there is a "Permission denied" error, run `docker-compose exec laravel chown -R www-data storage`).
 
 Note that the changes you make to local files will be automatically reflected in the container. 
@@ -29,3 +30,6 @@ docker-compose stop \
   && docker-compose rm -f mysql \
   && docker-compose up -d
 ``` 
+
+## Tests
+You can run te tests by using the following command: `docker exec assignment01-laravel ./vendor/bin/phpunit`.
