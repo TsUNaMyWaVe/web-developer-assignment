@@ -10,8 +10,10 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
+        "kyslik/column-sortable": "^6.0",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "league/csv": "^9.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

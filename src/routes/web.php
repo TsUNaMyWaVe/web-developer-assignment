@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BookController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BookController::class, 'index']);
+
+Route::get('/books/add', [BookController::class, 'add']);
+
+Route::post('/books', [BookController::class, 'store']);
+
+Route::get('/books/delete/{id}', [BookController::class, 'delete']);
+
+Route::get('/books/author/{author}', [BookController::class, 'indexAuthor']);
+
+Route::get('/books/author/{author}/edit', [BookController::class, 'editAuthor']);
+
+Route::post('/author', [BookController::class, 'storeAuthor']);
+
+Route::get('/export', [BookController::class, 'export']);
